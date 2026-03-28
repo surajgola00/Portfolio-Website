@@ -1,4 +1,12 @@
+import {
+  applyImageFallback,
+  createAvatarPlaceholder,
+  withFallbackImage,
+} from "../utils/placeholders";
+
 function MemberCard({ member, onClick, onKeyDown }) {
+  const fallbackImage = createAvatarPlaceholder(member.name);
+
   return (
     <div
       className="member-card"
@@ -6,21 +14,22 @@ function MemberCard({ member, onClick, onKeyDown }) {
       role="button"
       tabIndex={0}
       onKeyDown={onKeyDown}
+      aria-label={`Open ${member.name}'s portfolio`}
     >
       <div className="member-image-wrapper">
         <img
-          src={`/images/members/${member.id}.jpg`}
-          alt={member.name}
+          src={withFallbackImage(member.imageUrl, fallbackImage)}
+          alt={`${member.name} portrait`}
           className="member-image"
-          onError={(e) => {
-            e.target.src = 'https://via.placeholder.com/300x400?text=' + member.name
-          }}
+          loading="lazy"
+          decoding="async"
+          onError={(event) => applyImageFallback(event, fallbackImage)}
         />
       </div>
       <h3>{member.name}</h3>
-      <p className="member-role">Click to view portfolio</p>
+      <p className="member-role">{member.role}</p>
     </div>
-  )
+  );
 }
 
-export default MemberCard
+export default MemberCard;

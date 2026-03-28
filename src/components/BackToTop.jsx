@@ -1,33 +1,31 @@
-import { useEffect, useState, useRef } from 'react'
-import gsap from 'gsap'
-import '../styles/back-to-top.css'
+import { useEffect, useState } from "react";
+import "../styles/back-to-top.css";
 
 function BackToTop() {
-  const [isVisible, setIsVisible] = useState(false)
-  const buttonRef = useRef(null)
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const toggleVisibility = () => {
-      setIsVisible(window.scrollY > 300)
-    }
+      setIsVisible(window.scrollY > 300);
+    };
 
-    window.addEventListener('scroll', toggleVisibility)
-    return () => window.removeEventListener('scroll', toggleVisibility)
-  }, [])
+    toggleVisibility();
+    window.addEventListener("scroll", toggleVisibility, { passive: true });
+    return () => window.removeEventListener("scroll", toggleVisibility);
+  }, []);
 
   const scrollToTop = () => {
     // Smooth scroll to top
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
-    })
-  }
+      behavior: "smooth",
+    });
+  };
 
   return (
     <>
       {isVisible && (
         <button
-          ref={buttonRef}
           className="back-to-top"
           onClick={scrollToTop}
           aria-label="Back to top"
@@ -37,7 +35,7 @@ function BackToTop() {
         </button>
       )}
     </>
-  )
+  );
 }
 
-export default BackToTop
+export default BackToTop;

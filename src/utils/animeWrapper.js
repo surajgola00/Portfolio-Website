@@ -1,30 +1,32 @@
-// Wrapper to handle anime.js import compatibility
-let anime;
+let animeInstance = null;
 
-try {
-  // Try importing as default
-  import('animejs').then((module) => {
-    anime = module.default || module;
-  });
-} catch (e) {
-  console.error('Failed to load anime.js:', e);
-}
+const createNoopAnimation = () => ({
+  add: () => {},
+  pause: () => {},
+  play: () => {},
+  restart: () => {},
+  finished: Promise.resolve(),
+});
 
-// Fallback object if anime doesn't load
-const animeWrapper = new Proxy({}, {
-  get: (target, prop) => {
-    if (anime && typeof anime[prop] === 'function') {
-      return anime[prop].bind(anime);
+import("animejs")
+  .then((module) => {
+    animeInstance = module.default || module;
+  })
+  .catch(() => {});
+
+const animeWrapper = new Proxy(() => createNoopAnimation(), {
+  get: (_ignoredTarget, prop) => {
+    if (animeInstance && typeof animeInstance[prop] === "function") {
+      return animeInstance[prop].bind(animeInstance);
     }
-    if (anime && anime[prop]) {
-      return anime[prop];
+
+    if (animeInstance && animeInstance[prop]) {
+      return animeInstance[prop];
     }
-    // Return dummy function to prevent errors
-    return () => ({ add: () => {}, pause: () => {} });
+
+    return () => createNoopAnimation();
   },
-  apply: (target) => {
-    return () => ({ add: () => {}, pause: () => {} });
-  },
+  apply: () => createNoopAnimation(),
 });
 
 export default animeWrapper;
