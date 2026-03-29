@@ -1,102 +1,96 @@
 {
-  "id": "member4",
-  "slug": "member4",
-  "name": "Ravi Patel",
-  "role": "Backend Engineer & Database Architect",
-  "image": "/images/member4.jpeg",
-  "resumeUrl": "/resumes/member4Resume.pdf",
-  "email": "ravi.patel@example.com",
-  "phone": "+91-9876543219",
-  "location": "Mumbai, India",
+  "id": "seemanshi",
+  "slug": "seemanshi",
+  "name": "Seemanshi Verma",
+  "role": "AI/ML Enthusiast |Frontend Developer | Researcher",
+  "image": "/images/seemanshi.jpeg",
+  "resumeUrl": "/resumes/seemanshi_resume.pdf",
+  "email": "seemanshi052@gmail.com",
+  "phone": "+91-99713-84916",
+  "location": "India",
   "socialLinks": {
-    "github": "https://github.com/ravi-patel-backend",
-    "linkedin": "https://www.linkedin.com/in/ravi-patel-systems/",
-    "instagram": "https://www.instagram.com/ravi.patel.dev/",
-    "leetcode": "https://leetcode.com/u/ravipatel/"
+    "github": "https://github.com/seemanshi052-coder/",
+    "linkedin": "https://www.linkedin.com/in/seemanshi-v-518652294",
+    "instagram": "https://www.instagram.com/seemanshi17/",
+    "leetcode": "https://leetcode.com/u/seemanshi_codes/"
   },
-  "bio": "Backend specialist with 7+ years building large-scale systems. Expert in database optimization, system design, and high-performance computing. Passionate about solving complex problems.",
-  "objective": "To design and build scalable backend systems that can handle millions of transactions efficiently while maintaining data integrity and system reliability.",
-  "aboutHtml": "<p>Ravi is a backend architect who loves tackling complex system design challenges. With experience building systems handling 100M+ operations daily, he brings deep expertise in database optimization, caching strategies, and distributed systems.</p><p>Known for writing clean, maintainable code and mentoring junior developers, Ravi has successfully led technical initiatives at multiple Fortune 500 companies.</p>",
+
+  "bio": "B.Tech CSE student specializing in Artificial Intelligence and Machine Learning with hands-on experience in building AI-driven applications and full-stack systems. Passionate about solving real-world problems using data, APIs, and scalable architectures. Actively involved in research, hackathons, and technical development.",
+
+  "objective": "To grow as an AI/ML engineer and full-stack developer by building impactful solutions, working on real-world datasets, and contributing to innovative projects. I aim to strengthen my skills in machine learning, backend systems, and system design while preparing for top tech roles.",
+
   "skills": [
     {
-      "category": "Backend Languages",
-      "tags": ["Python", "Java", "Go", "C++", "PostgreSQL", "MySQL"]
+      "category": "Languages",
+      "tags": ["Python", "C", "C++", "Java", "JavaScript"]
     },
     {
-      "category": "Databases & Caching",
-      "tags": ["PostgreSQL", "MongoDB", "Redis", "Elasticsearch", "DynamoDB", "Graph Databases"]
+      "category": "Technical Skills",
+      "tags": ["Frontend Development", "Machine Learning (XGBoost)", "API Integration", "Deployment"]
     },
     {
-      "category": "System Design",
-      "tags": ["Microservices", "System Architecture", "API Design", "Message Queues", "Load Balancing", "Database Sharding"]
+      "category": "Tools",
+      "tags": ["Figma", "Notion", "Canva", "Git", "GitHub", "VS Code"]
     },
     {
-      "category": "Tools & Frameworks",
-      "tags": ["Django", "FastAPI", "Spring Boot", "Kafka", "gRPC", "GraphQL", "Apache Spark"]
+      "category": "Currently Learning",
+      "tags": ["AI/ML Systems", "Data Structures & Algorithms", "Backend Development", "System Design"]
+    },
+    {
+      "category": "Soft Skills",
+      "tags": ["Communication", "Leadership", "Teamwork"]
     }
   ],
+
   "projects": [
     {
       "id": 1,
-      "title": "Real-time Analytics Platform",
-      "description": "Built backend for real-time analytics platform processing 500K events/second. Achieved sub-100ms query latency using optimized database architecture.",
-      "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop",
-      "techStack": ["Python", "PostgreSQL", "Kafka", "Redis", "Elasticsearch"],
-      "demoLink": "#",
-      "repoLink": "https://github.com"
+      "title": "JalYukti - Intelligent Water Logging Dashboard",
+      "description": "Developed a multi-role dashboard system for citizens, commuters, officials, and city admins to monitor water logging. Built ward-level risk maps and real-time alert systems for improved city management.",
+      "imageUrl": "/images/JalYuktiWardRiskMap.jpeg",
+      "techStack": ["Web Development", "Dashboards", "Data Visualization"],
+      "demoLink": "#####",
+      "repoLink": "https://github.com/seemanshi052-coder/JalYukti-Hack4DelhiUpdated"
     },
     {
       "id": 2,
-      "title": "Distributed Payment Processing System",
-      "description": "Designed and built payment processing system handling 1M+ transactions daily with 99.99% uptime. Implemented ACID-compliant distributed transactions.",
-      "imageUrl": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=300&fit=crop",
-      "techStack": ["Java", "PostgreSQL", "Message Queues", "Microservices"],
-      "demoLink": "#",
-      "repoLink": "https://github.com"
-    },
-    {
-      "id": 3,
-      "title": "Database Optimization & Migration",
-      "description": "Optimized existing database reducing query time by 80%. Migrated 10TB of data with zero downtime using custom migration framework.",
-      "imageUrl": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=300&fit=crop",
-      "techStack": ["PostgreSQL", "Python", "Data Engineering", "Performance Tuning"],
-      "demoLink": "#",
-      "repoLink": "https://github.com"
+      "title": "FarmZyy - AI-Based Agricultural Advisory Platform",
+      "description": "Built REST APIs using FastAPI for crop, pest, and yield prediction. Developed ML models using XGBoost and integrated Firebase, weather APIs, and market data for real-time agricultural insights.",
+      "imageUrl": "https://opengraph.githubassets.com/1/seemanshi052-coder/Farmzyy",
+      "techStack": ["Python", "FastAPI", "Machine Learning", "Firebase", "APIs"],
+      "demoLink": "#####",
+      "repoLink": "https://github.com/seemanshi052-coder/Farmzyy"
     }
   ],
+
+  "achievements": [
+    {
+      "title": "Research Work",
+      "description": "Conducted a research paper on Astronomy under the guidance of Dr. Yukti Mutreja."
+    }
+  ],
+
   "certificates": [
     {
       "id": 1,
-      "title": "System Design Interview Mastery",
-      "issuer": "Educative.io",
-      "date": "2023",
-      "imageUrl": "https://images.unsplash.com/photo-1516321318423-f06f70259b51?w=300&h=200&fit=crop"
-    },
-    {
-      "id": 2,
-      "title": "PostgreSQL Advanced Performance Tuning",
-      "issuer": "PostgreSQL Global Development Group",
-      "date": "2022",
-      "imageUrl": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=300&h=200&fit=crop"
-    },
-    {
-      "id": 3,
-      "title": "Distributed Systems Design",
-      "issuer": "MIT OpenCourseWare",
-      "date": "2021",
-      "imageUrl": "https://images.unsplash.com/photo-1560264357-8d9766a11d3f?w=300&h=200&fit=crop"
+      "title": "Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate",
+      "issuer": "Oracle University",
+      "date": "2025-2027",
+      "imageUrl": "#",
+      "credentialUrl": "https://drive.google.com/file/d/1FYibgDpIREty4xC-ELtOYzrtKDfsYbSd/view"
     }
   ],
+
   "resume": {
-    "heading": "Backend Engineering & System Design Expert",
+    "heading": "Professional Resume",
     "sections": [
       {
         "title": "Summary",
-        "content": "Accomplished backend engineer with proven expertise in building large-scale, high-performance systems. Expert in database architecture, system design, and technical leadership. Track record of delivering mission-critical systems."
+        "content": "B.Tech CSE student specializing in AI & ML with experience in frontend development, machine learning models, and API integrations. Passionate about building impactful real-world solutions and continuously improving technical skills."
       },
       {
-        "title": "Key Achievements",
-        "content": "• Designed system processing 100M+ operations daily with 99.99% uptime\n• Optimized databases reducing query latency by 80%\n• Led successful migration of 10TB+ data with zero downtime\n• Mentored and led team of 8 engineers\n• Implemented distributed transaction system handling 1M+ payments daily"
+        "title": "Education",
+        "content": "B.Tech CSE (AI & ML) - Dronacharya College of Engineering (2025–2029)\nClass 12 (CBSE) - 82%\nClass 10 (CBSE) - 88.6%"
       }
     ]
   }

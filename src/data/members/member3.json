@@ -1,102 +1,67 @@
 {
-  "id": "member3",
-  "slug": "member3",
-  "name": "Priya Sharma",
-  "role": "DevOps & Cloud Architecture Engineer",
-  "image": "/images/member3.jpeg",
-  "resumeUrl": "/resumes/member3Resume.pdf",
-  "email": "priya.sharma@example.com",
-  "phone": "+91-9988776655",
+  "id": "vanshika",
+  "slug": "vanshika",
+  "name": "Vanshika Sabharwal",
+  "role": "AI & Data Science Enthusiast",
+
+  "image": "/images/vanshika.jpeg",
+
+  "resumeUrl": "resumes/vanshika_resume.pdf",
+  "email": "vanshikasabharwal400@gmail.com",
+  "phone": "+91-97737-79633",
   "location": "Delhi, India",
   "socialLinks": {
-    "github": "https://github.com/priya-sharma-devops",
-    "linkedin": "https://www.linkedin.com/in/priya-sharma-cloud/",
-    "instagram": "https://www.instagram.com/priya.sharma.devops/",
-    "leetcode": "https://leetcode.com/u/priyasharma/"
+    "github": "https://github.com/vanshikasabharwal11/",
+    "linkedin": "https://www.linkedin.com/in/vanshika-sabharwal-98a8b9367/",
+    "instagram": "https://www.instagram.com/_vanshika11._/",
+    "leetcode": "https://leetcode.com/u/VanshikaS11/"
   },
-  "bio": "Cloud architect and DevOps specialist with 6+ years experience designing scalable infrastructure. AWS certified and passionate about automation and continuous integration.",
-  "objective": "To architect robust, scalable cloud infrastructure solutions that enable businesses to focus on innovation while ensuring security, reliability, and cost efficiency.",
-  "aboutHtml": "<p>Priya is a seasoned DevOps engineer who has transformed infrastructure for multiple high-growth startups and enterprises. Her expertise spans AWS, Kubernetes, Docker, and infrastructure-as-code frameworks.</p><p>With a passion for automation and continuous improvement, Priya has reduced deployment times by up to 80% and improved system reliability across multiple organizations. She's also an active speaker at tech conferences.</p>",
+  "bio": "BTech student passionate about solving real-world problems using technology, with a growing interest in AI, data-driven systems, and innovative solutions.",
+
+  "objective": "To build impactful and intelligent systems using AI and modern technologies while continuously learning and improving as a developer.",
+
+  "aboutHtml": "<p>I am a BTech student currently exploring the world of technology with a strong interest in artificial intelligence and problem-solving. I enjoy working on real-world projects that help me understand how systems are built and optimized.</p><p>I am currently learning machine learning and improving my programming skills while actively participating in team-based projects. I aim to build solutions that are both practical and meaningful.</p>",
+
   "skills": [
     {
-      "category": "Cloud Platforms",
-      "tags": ["AWS", "Google Cloud", "Azure", "CloudFormation", "Terraform", "Infrastructure-as-Code"]
+      "category": "Programming",
+      "tags": ["C", "C++", "Python"]
     },
     {
-      "category": "DevOps & Deployment",
-      "tags": ["Docker", "Kubernetes", "Jenkins", "GitLab CI/CD", "GitHub Actions", "Ansible", "ArgoCD"]
+      "category": "Core Concepts",
+      "tags": ["Data Structures", "Problem Solving", "OOP"]
     },
     {
-      "category": "Monitoring & Logging",
-      "tags": ["Prometheus", "Grafana", "ELK Stack", "DataDog", "New Relic", "CloudWatch", "Log Analytics"]
+      "category": "AI & ML",
+      "tags": ["Machine Learning", "Pandas", "NumPy"]
     },
     {
-      "category": "Other",
-      "tags": ["Linux Administration", "Networking", "Security", "Cost Optimization", "Disaster Recovery"]
+      "category": "Tools",
+      "tags": ["Git", "GitHub", "VS Code"]
     }
   ],
+
   "projects": [
     {
       "id": 1,
-      "title": "Kubernetes Migration for Enterprise",
-      "description": "Led migration of 50+ microservices from traditional infrastructure to Kubernetes. Achieved 60% cost reduction and improved deployment frequency to 100+ times per day.",
-      "imageUrl": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=300&fit=crop",
-      "techStack": ["Kubernetes", "Docker", "Terraform", "AWS"],
-      "demoLink": "#",
-      "repoLink": "https://github.com"
-    },
-    {
-      "id": 2,
-      "title": "CI/CD Pipeline for 200+ Services",
-      "description": "Built comprehensive CI/CD infrastructure handling 200+ services with automated testing, deployment, and rollback capabilities.",
-      "imageUrl": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=300&fit=crop",
-      "techStack": ["Jenkins", "GitLab CI", "Docker", "AWS EC2"],
-      "demoLink": "#",
-      "repoLink": "https://github.com"
-    },
-    {
-      "id": 3,
-      "title": "Advanced Monitoring & Alerting System",
-      "description": "Implemented centralized monitoring system with predictive alerting. Reduced mean time to recovery (MTTR) by 70%.",
-      "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop",
-      "techStack": ["Prometheus", "Grafana", "ELK", "PagerDuty"],
-      "demoLink": "#",
-      "repoLink": "https://github.com"
+      "title": "Smart Yatra - Travel Planning Platform",
+      "description": "Developed a smart travel platform for efficient trip planning and route optimization, with enhanced user experience through structured data handling and blockchain-based tourist identity management.",
+      "imageUrl": "https://opengraph.githubassets.com/1/surajgola00/Smart-Yatra",
+      "techStack": ["Python", "Blockchain", "Data Handling"],
+      "demoLink": "https://drive.google.com/file/d/1kj6SQ3OnHBST44NhxIyrrUaoDwa3o3Tg/view?usp=sharing",
+      "repoLink": "https://github.com/surajgola00/Smart-Yatra.git"
     }
   ],
+
   "certificates": [
-    {
-      "id": 1,
-      "title": "AWS Solutions Architect Professional",
-      "issuer": "Amazon Web Services",
-      "date": "2023",
-      "imageUrl": "https://images.unsplash.com/photo-1560264357-8d9766a11d3f?w=300&h=200&fit=crop"
-    },
-    {
-      "id": 2,
-      "title": "Kubernetes Administrator (CKAD)",
-      "issuer": "Linux Foundation",
-      "date": "2022",
-      "imageUrl": "https://images.unsplash.com/photo-1516321318423-f06f70259b51?w=300&h=200&fit=crop"
-    },
-    {
-      "id": 3,
-      "title": "HashiCorp Certified Terraform Associate",
-      "issuer": "HashiCorp",
-      "date": "2021",
-      "imageUrl": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=300&h=200&fit=crop"
-    }
   ],
+
   "resume": {
-    "heading": "Cloud Architecture & DevOps Expert",
+    "heading": "Aspiring AI Developer",
     "sections": [
       {
         "title": "Summary",
-        "content": "Results-driven DevOps architect with proven expertise in designing and implementing scalable cloud infrastructure. AWS certified professional with track record of improving deployment frequency and system reliability."
-      },
-      {
-        "title": "Key Achievements",
-        "content": "• Architected and deployed Kubernetes cluster serving 1M+ transactions daily\n• Reduced deployment time from 2 hours to 15 minutes\n• Achieved 99.99% uptime SLA across all services\n• Led cost optimization initiatives saving $500K+ annually\n• Mentored team of 4 engineers in cloud best practices"
+        "content": "Motivated BTech student with a growing interest in AI and data-driven systems. Passionate about learning, building real-world projects, and continuously improving technical skills."
       }
     ]
   }
