@@ -1,96 +1,78 @@
 {
-  "id": "member2",
-  "slug": "member2",
-  "name": "Alex Chen",
-  "role": "UI/UX Designer & Frontend Developer",
-  "image": "/images/member2.jpeg",
-    "resumeUrl": "/resumes/member2Resume.pdf",
-  "email": "alex.chen@example.com",
-  "phone": "+91-9876543210",
-  "location": "Bangalore, India",
-  "bio": "Creative UI/UX designer with 5+ years experience building beautiful, user-centric interfaces. Passionate about design systems and responsive design patterns.",
-  "objective": "To create intuitive and visually stunning user interfaces that solve real problems and delight users across all devices.",
-  "aboutHtml": "<p>Alex is a talented designer who bridges the gap between design and development. With expertise in both UI/UX design and frontend development, Alex brings comprehensive solutions to projects.</p><p>Specializing in design systems, accessibility, and modern design trends, Alex has worked with Fortune 500 companies and innovative startups to deliver world-class digital experiences.</p>",
+  "id": "Tushar",
+  "slug": "Tushar",
+  "name": "Tushar",
+  "role": "AI & Machine Learning Developer",
+  "image": "/images/tushar.jpeg",
+  "resumeUrl": "/resumes/tusharResume.pdf",
+  "email": "kaushiktushar337@gmail.com",
+  "phone": "9718617177",
+  "location": "New Delhi, India",
+  "bio": "B.Tech CSE student at Dronacharya College of Engineering with a focus on predictive modeling and automation. Passionate about leveraging data science to solve complex resource allocation problems, particularly in healthcare.",
+  "objective": "To leverage data science to solve complex resource allocation problems, particularly in healthcare, while actively participating in the startup incubation ecosystem to bring tech-driven ideas to life.",
+  "aboutHtml": "<p>Tushar is an AI & Machine Learning developer currently pursuing a B.Tech in Computer Science and Engineering at Dronacharya College of Engineering (2025–2029).</p><p>He specializes in predictive analytics, feature engineering, and automation scripting. His flagship project, CareMatrix, uses Random Forest to forecast hospital patient inflow with a 72-hour lead time. Tushar was selected for the ACIC SGTU Incubation Program and placed 3rd at the CodeSphere 36-Hour Hackathon at SGT University.</p>",
   "skills": [
     {
-      "category": "Design",
-      "tags": ["Figma", "Adobe XD", "Sketch", "UI Design", "UX Research", "Wireframing", "Prototyping", "Design Systems"]
+      "category": "Languages",
+      "tags": ["Python", "C++", "SQL", "Java"]
     },
     {
-      "category": "Frontend",
-      "tags": ["React", "CSS3", "Tailwind CSS", "Framer Motion", "Responsive Design", "Accessibility", "Web Design"]
+      "category": "AI/ML",
+      "tags": ["Predictive Analytics", "Random Forest", "Feature Engineering", "Scikit-learn", "Pandas"]
     },
     {
       "category": "Tools & Software",
-      "tags": ["Figma", "Adobe Creative Suite", "VS Code", "Git", "InVision", "Zeplin"]
+      "tags": ["Git", "GitHub", "Streamlit", "Linux", "Automation Scripting"]
     },
     {
       "category": "Soft Skills",
-      "tags": ["Communication", "Creative Thinking", "User Research", "Mentoring", "Leadership"]
+      "tags": ["Problem Solving", "Strategic Thinking", "Analytical Reasoning", "Innovation"]
     }
   ],
   "projects": [
     {
       "id": 1,
-      "title": "Design System for SaaS Platform",
-      "description": "Created comprehensive design system with 200+ components, accessibility guidelines, and brand documentation for enterprise SaaS application.",
-      "imageUrl": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=300&fit=crop",
-      "techStack": ["Figma", "React", "Storybook", "Design Tokens"],
+      "title": "CareMatrix — AI-Powered Resource Forecasting",
+      "description": "Developed a predictive engine using Random Forest to forecast hospital patient inflow with a 72-hour lead time. Engineered features by correlating environmental variables like AQI and weather patterns with historical admission data. Implemented automated load visualization heatmaps to streamline medical staff distribution.",
+      "imageUrl": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400&h=300&fit=crop",
+      "techStack": ["Python", "Random Forest", "Scikit-learn", "Pandas", "Streamlit"],
       "demoLink": "#",
-      "repoLink": "https://github.com"
-    },
-    {
-      "id": 2,
-      "title": "Mobile App Redesign",
-      "description": "Complete redesign of mobile banking app resulting in 45% increase in user engagement. Implemented accessibility-first approach.",
-      "imageUrl": "https://images.unsplash.com/photo-1512941691920-25bda36e892d?w=400&h=300&fit=crop",
-      "techStack": ["Figma", "User Research", "Accessibility", "iOS Design"],
-      "demoLink": "#",
-      "repoLink": "#"
-    },
-    {
-      "id": 3,
-      "title": "E-learning Platform UI",
-      "description": "Designed and developed interactive learning dashboard with real-time progress tracking and personalized recommendations.",
-      "imageUrl": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=300&fit=crop",
-      "techStack": ["React", "Tailwind CSS", "D3.js", "Figma"],
-      "demoLink": "#",
-      "repoLink": "https://github.com"
+      "repoLink": "https://github.com/kaushiktushar337"
     }
   ],
   "certificates": [
     {
       "id": 1,
-      "title": "Google UX Design Certificate",
-      "issuer": "Google",
-      "date": "2022",
-      "imageUrl": "https://images.unsplash.com/photo-1503956445157-a01faf94d29c?w=300&h=200&fit=crop"
+      "title": "3rd Position — CodeSphere 36-Hour Hackathon",
+      "issuer": "SGT University",
+      "date": "2024",
+      "imageUrl": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=300&h=200&fit=crop"
     },
     {
       "id": 2,
-      "title": "Figma Advanced Design Systems",
-      "issuer": "Interaction Design Foundation",
-      "date": "2021",
-      "imageUrl": "https://images.unsplash.com/photo-1557821552-17105176677c?w=300&h=200&fit=crop"
+      "title": "ACIC SGTU Incubation Program",
+      "issuer": "ACIC SGT University",
+      "date": "2024",
+      "imageUrl": "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=300&h=200&fit=crop"
     },
     {
       "id": 3,
-      "title": "Accessibility in Design (WCAG 2.1)",
-      "issuer": "World Wide Web Consortium",
-      "date": "2020",
-      "imageUrl": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=300&h=200&fit=crop"
+      "title": "National Science Day 2026 — Selected Delegate",
+      "issuer": "Vigyan Bhawan, Government of India",
+      "date": "2026",
+      "imageUrl": "https://images.unsplash.com/photo-1532094349884-543559333604?w=300&h=200&fit=crop"
     }
   ],
   "resume": {
-    "heading": "Creative Designer & Frontend Developer",
+    "heading": "AI & Machine Learning Developer — B.Tech CSE Student",
     "sections": [
       {
         "title": "Summary",
-        "content": "Innovative designer with strong frontend development skills. Proven track record of creating award-winning digital experiences. Expert in design systems, accessibility, and modern design practices."
+        "content": "Computer Science student at Dronacharya College of Engineering with a focus on predictive modeling and automation. Passionate about leveraging data science to solve complex resource allocation problems, particularly in healthcare, while actively participating in the startup incubation ecosystem."
       },
       {
         "title": "Key Achievements",
-        "content": "• Designed design system used by 50+ developers\n• Increased product engagement by 45% through UX redesign\n• Led rebranding project for major enterprise client\n• Mentored 5 junior designers\n• Created responsive designs supporting 1M+ monthly users"
+        "content": "• 3rd Position at CodeSphere 36-Hour Hackathon, SGT University\n• Selected for ACIC SGTU Incubation Program to scale CareMatrix for market readiness\n• Selected delegate at National Science Day 2026 at Vigyan Bhawan for discussions on 'Women in Science: Catalyzing Viksit Bharat'\n• Built CareMatrix — AI-powered hospital resource forecasting with 72-hour lead time\n• Correlated AQI and weather data with hospital admission records for improved prediction accuracy"
       }
     ]
   }
