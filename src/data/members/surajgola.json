@@ -47,7 +47,7 @@
       "description": "Engineered an AI-powered healthcare backend system for real-time patient monitoring and clinical decision support. Designed and exposed REST APIs using FastAPI, integrated AI models for health insights, and managed structured data pipelines — improving healthcare management efficiency end-to-end.",
       "imageUrl": "/images/CareMatrixDashboard.jpeg",
       "techStack": ["Python", "FastAPI", "AI Models", "Database"],
-      "demoLink": "https://drive.google.com/file/d/15hxk2fw424ntLUi7upqcotJgq7gcymIR/view",
+      "demoLink": "https://drive.google.com/file/d/12l_c42V-aYm-VreFzV2NPWavICmSuWoF/view",
       "repoLink": "https://github.com/TodFodCoders/CareMatrix"
     },
     {
