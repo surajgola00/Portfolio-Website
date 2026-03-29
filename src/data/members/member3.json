@@ -58,30 +58,6 @@
       "repoLink": "https://github.com"
     }
   ],
-  "experience": [
-    {
-      "id": 1,
-      "company": "CloudScale Systems",
-      "position": "Senior DevOps Architect",
-      "duration": "2020 - Present",
-      "description": "Architected and managed infrastructure for 10+ high-traffic applications. Led team of 4 engineers. Achieved 99.99% uptime SLA.",
-      "highlight": true
-    },
-    {
-      "id": 2,
-      "company": "FinTech Innovations Ltd",
-      "position": "DevOps Engineer",
-      "duration": "2017 - 2020",
-      "description": "Implemented Kubernetes cluster handling 1M+ transactions daily. Reduced infrastructure costs by 50% through optimization."
-    },
-    {
-      "id": 3,
-      "company": "Tech Startup Hub",
-      "position": "Infrastructure Engineer",
-      "duration": "2015 - 2017",
-      "description": "Managed AWS infrastructure from scratch. Implemented automated backup and disaster recovery systems."
-    }
-  ],
   "certificates": [
     {
       "id": 1,

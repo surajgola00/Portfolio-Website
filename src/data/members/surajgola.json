@@ -2,11 +2,11 @@
   "id": "surajgola",
   "slug": "surajgola",
   "name": "Suraj Gola",
-  "role": "Full Stack Developer",
+  "role": "Team Lead & Full Stack Developer",
   "image": "/images/surajgola.jpeg",
     "resumeUrl": "/resumes/SurajGolaResume.pdf",
-  "email": "suraj@example.com",
-  "phone": "+91-XXXXXXXXXX",
+  "email": "ss0331984@gmail.com",
+  "phone": "+91-87006-22004",
   "location": "India",
   "bio": "Passionate full-stack developer with expertise in web technologies and cloud solutions. 4+ years of experience building scalable applications using modern tech stacks.",
   "objective": "To leverage technical expertise in building innovative, scalable web applications while contributing to team growth and creating meaningful user experiences.",
@@ -56,30 +56,6 @@
       "techStack": ["React", "D3.js", "Python", "PostgreSQL"],
       "demoLink": "#",
       "repoLink": "https://github.com"
-    }
-  ],
-  "experience": [
-    {
-      "id": 1,
-      "company": "Tech Startup Inc",
-      "position": "Senior Developer",
-      "duration": "2022 - Present",
-      "description": "Led development of multiple microservices. architected scalable solutions. mentored junior developers.",
-      "highlight": true
-    },
-    {
-      "id": 2,
-      "company": "Digital Solutions Ltd",
-      "position": "Full Stack Developer",
-      "duration": "2020 - 2022",
-      "description": "Developed and maintained web applications. improved performance by 40%. implemented CI/CD pipelines."
-    },
-    {
-      "id": 3,
-      "company": "StartUp Hub",
-      "position": "Junior Developer",
-      "duration": "2019 - 2020",
-      "description": "Built frontend components. collaborated with design team. learned best practices in web development."
     }
   ],
   "certificates": [

@@ -237,10 +237,8 @@
         font-size: 0.8rem;
     }
 }
-        min-height: auto;
-        padding: var(--gap-xl) var(--gap-md);
-    }
 
+@media (max-width: 600px) {
     .landing-hero h1 {
         margin-bottom: var(--gap-sm);
     }

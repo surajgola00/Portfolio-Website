@@ -58,30 +58,6 @@
       "repoLink": "https://github.com"
     }
   ],
-  "experience": [
-    {
-      "id": 1,
-      "company": "Design Studios Inc",
-      "position": "Senior Product Designer",
-      "duration": "2021 - Present",
-      "description": "Led design team for 3 major product releases. Established design system used across 15+ products. Mentored 5 junior designers.",
-      "highlight": true
-    },
-    {
-      "id": 2,
-      "company": "TechVision Corp",
-      "position": "UI/UX Designer",
-      "duration": "2018 - 2021",
-      "description": "Designed web and mobile interfaces for analytics platform. Conducted user research and usability testing. Improved conversion rates by 35%."
-    },
-    {
-      "id": 3,
-      "company": "Creative Agency XYZ",
-      "position": "Junior Designer",
-      "duration": "2016 - 2018",
-      "description": "Created digital designs for various clients. Learned industry best practices. Collaborated with developers to ensure design implementation quality."
-    }
-  ],
   "certificates": [
     {
       "id": 1,

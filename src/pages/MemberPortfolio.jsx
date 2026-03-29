@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from "react-router-dom";
-import { useEffect, useMemo, useRef } from "react";
+import { useEffect, useMemo } from "react";
 import { MEMBERS_ARRAY, getMemberById } from "../data/members";
 import Header from "../components/Header";
 import HeroSection from "../components/HeroSection";
@@ -7,7 +7,6 @@ import ObjectiveSection from "../components/sections/ObjectiveSection";
 import AboutSection from "../components/sections/AboutSection";
 import SkillsSection from "../components/sections/SkillsSection";
 import ProjectsSection from "../components/sections/ProjectsSection";
-import ExperienceSection from "../components/sections/ExperienceSection";
 import CertificatesSection from "../components/sections/CertificatesSection";
 import SectionNav from "../components/SectionNav";
 import Footer from "../components/Footer";
@@ -40,60 +39,6 @@ function MemberPortfolio() {
     return null;
   }
 
-  // Smart auto-scroll to next section when scrolling
-  const scrollLockRef = useRef(false);
-  const lastWheelTimeRef = useRef(0);
-  useEffect(() => {
-    const handleWheel = (e) => {
-      const now = Date.now();
-      const timeSinceLastWheel = now - lastWheelTimeRef.current;
-      lastWheelTimeRef.current = now;
-
-      // Prevent rapid consecutive scroll triggers (debounce)
-      if (timeSinceLastWheel < 800 || scrollLockRef.current) {
-        return;
-      }
-
-      const heroHeight = document.querySelector('.hero-section')?.offsetHeight || 0;
-      const scrollY = window.scrollY;
-
-      // Only auto-scroll if we're in hero section or just leaving it
-      if (scrollY < heroHeight * 1.2) {
-        const sections = [
-          document.querySelector('.objective-section'),
-          document.querySelector('.about-section'),
-          document.querySelector('.skills-section'),
-          document.querySelector('.projects-section'),
-          document.querySelector('.experience-section'),
-          document.querySelector('.certificates-section'),
-        ].filter(Boolean);
-
-        if (sections.length === 0) return;
-
-        // Find next section to scroll to
-        let targetSection = null;
-        for (const section of sections) {
-          const sectionTop = section.offsetTop;
-          if (sectionTop > scrollY + 100) {
-            targetSection = section;
-            break;
-          }
-        }
-
-        if (targetSection && e.deltaY > 0) {
-          scrollLockRef.current = true;
-          targetSection.scrollIntoView({ behavior: 'smooth' });
-          window.setTimeout(() => {
-            scrollLockRef.current = false;
-          }, 1000);
-        }
-      }
-    };
-
-    window.addEventListener('wheel', handleWheel, { passive: true });
-    return () => window.removeEventListener('wheel', handleWheel);
-  }, []);
-
   const contactItems = [
     memberData.contact.email
       ? {
@@ -121,7 +66,6 @@ function MemberPortfolio() {
     { id: "about", className: "about-section", label: "About", icon: "👤" },
     { id: "skills", className: "skills-section", label: "Skills", icon: "💻" },
     { id: "projects", className: "projects-section", label: "Projects", icon: "🚀" },
-    { id: "experience", className: "experience-section", label: "Experience", icon: "💼" },
     { id: "certificates", className: "certificates-section", label: "Certificates", icon: "🏆" },
   ];
 
@@ -152,11 +96,6 @@ function MemberPortfolio() {
           {memberData.projects?.length > 0 && (
             <section className="projects-section">
               <ProjectsSection projects={memberData.projects} />
-            </section>
-          )}
-          {memberData.experience?.length > 0 && (
-            <section className="experience-section">
-              <ExperienceSection experience={memberData.experience} />
             </section>
           )}
           {memberData.certificates?.length > 0 && (

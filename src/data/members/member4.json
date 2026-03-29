@@ -58,30 +58,6 @@
       "repoLink": "https://github.com"
     }
   ],
-  "experience": [
-    {
-      "id": 1,
-      "company": "Global Tech Solutions",
-      "position": "Principal Backend Engineer",
-      "duration": "2021 - Present",
-      "description": "Led backend team of 8 engineers. Architected microservices infrastructure processing 100M+ operations daily. Reduced system latency by 60%.",
-      "highlight": true
-    },
-    {
-      "id": 2,
-      "company": "FinTech Enterprise",
-      "position": "Senior Backend Engineer",
-      "duration": "2018 - 2021",
-      "description": "Designed database architecture for payment processing. Implemented optimizations improving throughput by 300%. Mentored 4 junior engineers."
-    },
-    {
-      "id": 3,
-      "company": "DataCorp Analytics",
-      "position": "Backend Developer",
-      "duration": "2015 - 2018",
-      "description": "Built APIs and backend services for analytics platform. Optimized database queries achieving 5x performance improvement."
-    }
-  ],
   "certificates": [
     {
       "id": 1,
