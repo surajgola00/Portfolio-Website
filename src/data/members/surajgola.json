@@ -2,15 +2,15 @@
   "id": "surajgola",
   "slug": "surajgola",
   "name": "Suraj Gola",
-  "role": "Full Stack Developer | AI & Backend Enthusiast",
+  "role": "Backend Developer | Competitive Programmer | Open Source Contributor",
   "image": "/images/surajgola.jpeg",
   "resumeUrl": "/resumes/SurajGolaResume.pdf",
   "email": "ss0331984@gmail.com",
   "phone": "+91-87006-22004",
   "location": "India",
-  "bio": "B.Tech CSE student and full-stack developer with strong interest in backend systems, AI, and real-world problem solving. Experienced in building scalable projects, participating in national hackathons, and publishing research.",
-  "objective": "To build impactful and scalable technology solutions by leveraging skills in backend development, AI, and system design while continuously learning and contributing to innovative projects.",
-  
+  "bio": "First-year B.Tech CSE student with a strong focus on backend systems, API design, and competitive programming. Currently building scalable backend projects, contributing to open source, and sharpening problem-solving skills with the goal of becoming a backend engineer at a top product company. Hackathon winner with hands-on experience in real-world system design and AI-integrated applications.",
+  "objective": "To grow as a backend engineer by building robust, scalable systems and APIs, contributing to meaningful open source projects, and solving challenging problems. Actively working toward securing a backend engineering role at a product-focused company where I can create real impact. In the short term, I am focused on strengthening my backend development skills, mastering system design principles, and excelling in competitive programming to prepare for technical interviews at top product companies.",
+
   "skills": [
     {
       "category": "Frontend",
@@ -25,6 +25,10 @@
       "tags": ["Git", "GitHub", "ESP32", "Arduino", "Automation"]
     },
     {
+      "category": "Currently Focusing On",
+      "tags": ["System Design", "Data Structures & Algorithms", "Open Source Contributions", "Competitive Programming"]
+    },
+    {
       "category": "Other",
       "tags": ["Problem Solving", "Team Leadership", "Hackathons", "Research"]
     }
@@ -34,7 +38,8 @@
     {
       "id": 1,
       "title": "CareMatrix",
-      "description": "Engineered an AI-powered healthcare system for patient monitoring and decision support. Enabled real-time insights and improved healthcare management efficiency.",
+      "description": "Engineered an AI-powered healthcare backend system for real-time patient monitoring and clinical decision support. Designed and exposed REST APIs using FastAPI, integrated AI models for health insights, and managed structured data pipelines — improving healthcare management efficiency end-to-end.",
+      "imageUrl": "/images/surajgola.jpeg",
       "techStack": ["Python", "FastAPI", "AI Models", "Database"],
       "demoLink": "https://drive.google.com/file/d/15hxk2fw424ntLUi7upqcotJgq7gcymIR/view",
       "repoLink": "https://github.com/TodFodCoders/CareMatrix"
@@ -42,7 +47,8 @@
     {
       "id": 2,
       "title": "Smart Yatra",
-      "description": "Developed a smart travel platform for efficient trip planning and route optimization. Enhanced user experience through structured data handling.",
+      "description": "Built a backend-driven smart travel platform handling trip planning and route optimization logic. Focused on clean API design and efficient structured data handling to deliver a seamless user experience across travel workflows.",
+      "imageUrl": "/images/surajgola.jpeg",
       "techStack": ["Python", "Web Development"],
       "demoLink": "https://drive.google.com/file/d/1kj6SQ3OnHBST44NhxIyrrUaoDwa3o3Tg/view?usp=sharing",
       "repoLink": "https://github.com/surajgola00/Smart-Yatra"
@@ -50,52 +56,50 @@
     {
       "id": 3,
       "title": "Repo Scanning System",
-      "description": "Built an automated repository scanning tool to detect security vulnerabilities and code inefficiencies, improving code quality and safety.",
+      "description": "Developed an automated repository scanning tool that detects security vulnerabilities and code inefficiencies across codebases. Designed as an open source utility to help teams enforce code quality and safety standards at scale.",
+      "imageUrl": "/images/surajgola.jpeg",
       "techStack": ["Python", "Automation"],
       "demoLink": "https://drive.google.com/file/d/15hxk2fw424ntLUi7upqcotJgq7gcymIR/view",
       "repoLink": "https://github.com/TodFodCoders/RIFT-2k26"
-    },
-    {
-      "id": 4,
-      "title": "Emergency Vehicle Road Clearance System",
-      "description": "Developed a smart system to prioritize emergency vehicles by clearing traffic lanes in advance using automation and hardware integration.",
-      "techStack": ["Arduino", "ESP32", "IoT"],
-      "demoLink": "https://drive.google.com/file/d/1_myjQqI6oWM2gIQ8SfEeol_685S-n0RG/view",
-      "repoLink": "https://github.com/surajgola00/Emergency-Vehicle-road-clearance-system"
-    }
-  ],
-  
-  "achievements": [
-    {
-      "title": "Plaksha Young Creators League (YCL)",
-      "description": "Selected in Top 50 out of 1058 teams for national-level exhibition. Presented Emergency Vehicle Road Clearance System."
-    },
-    {
-      "title": "CodeSphere Hackathon",
-      "description": "Secured winning position among competing teams. Selected for ACIC Incubation Program at SGT University to scale the project."
-    },
-    {
-      "title": "PW Hackathon",
-      "description": "Participated in a national-level hackathon. Built a functional prototype solving real-world problems under time constraints."
-    },
-    {
-      "title": "Research Paper Publication",
-      "description": "Published and presented a research paper in a reputed conference/book, showcasing research and technical documentation skills."
     }
   ],
 
-  "certificates": [],
+  "achievements": [
+    {
+      "title": "Research Paper Publication",
+      "description": "Published and presented a research paper at 32nd International Conference at AKS University Satna, on the topic AI Guided Design of Eco-Friendl Coatings from Food Waste."
+    }
+  ],
+
+  "certificates": [
+    {
+      "id": 1,
+      "title": "Winner @ CodeSphere Hackathon – ACIC Incubation Program at SGT University",
+      "issuer": "SGT University",
+      "date": "March 2026",
+      "imageUrl": "/images/surajgola.jpeg",
+      "credentialUrl": "https://drive.google.com/file/d/1cmXpUmO32uObqx5lVWy7yw94Ouz0uEHw/view?usp=drive_link"
+    },
+    {
+      "id": 2,
+      "title": "Certificate Winner (Finalist) @ RIFT '26 Hackathon",
+      "issuer": "RIFT'26",
+      "date": "February 2026",
+      "imageUrl": "/images/surajgola.jpeg",
+      "credentialUrl": "https://rift2026.vercel.app/verify/319dbc05-6113-4895-bba6-cf47105fe709"
+    }
+  ],
 
   "resume": {
     "heading": "Professional Resume",
     "sections": [
       {
         "title": "Summary",
-        "content": "B.Tech CSE student with strong interest in backend development, AI, and automation. Experienced in building real-world projects, leading teams, and participating in national-level hackathons."
+        "content": "First-year B.Tech CSE student with a strong foundation in backend development, REST API design, and automation. Competitive programmer actively solving DSA problems and contributing to open source. Hackathon winner with experience building and shipping real-world backend systems. Targeting backend engineering roles at product-focused companies."
       },
       {
         "title": "Key Achievements",
-        "content": "• Winner - CodeSphere Hackathon\n• Selected for ACIC Incubation Program at SGT University\n• Top 50 out of 1058 teams - Plaksha YCL\n• Published research paper in reputed conference/book\n• Built multiple real-world projects in AI, backend, and IoT"
+        "content": "• Winner - CodeSphere Hackathon (ACIC Incubation Program, SGT University)\n• Finalist - RIFT '26 PW Hackathon\n• Selected for ACIC Incubation Program at SGT University\n• Published research paper in reputed conference/book\n• Active open source contributor on GitHub\n• Consistent competitive programmer on LeetCode / Codeforces"
       }
     ]
   }
