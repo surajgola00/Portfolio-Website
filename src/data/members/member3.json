@@ -46,7 +46,7 @@
       "id": 1,
       "title": "Smart Yatra - Travel Planning Platform",
       "description": "Developed a smart travel platform for efficient trip planning and route optimization, with enhanced user experience through structured data handling and blockchain-based tourist identity management.",
-      "imageUrl": "https://opengraph.githubassets.com/1/surajgola00/Smart-Yatra",
+      "imageUrl": "images/logo.png",
       "techStack": ["Python", "Blockchain", "Data Handling"],
       "demoLink": "https://drive.google.com/file/d/1kj6SQ3OnHBST44NhxIyrrUaoDwa3o3Tg/view?usp=sharing",
       "repoLink": "https://github.com/surajgola00/Smart-Yatra.git"

@@ -54,7 +54,7 @@
       "id": 2,
       "title": "Smart Yatra",
       "description": "Built a backend-driven smart travel platform handling trip planning and route optimization logic. Focused on clean API design and efficient structured data handling to deliver a seamless user experience across travel workflows.",
-      "imageUrl": "https://opengraph.githubassets.com/1/surajgola00/Smart-Yatra",
+      "imageUrl": "/images/logo.png",
       "techStack": ["Python", "Web Development"],
       "demoLink": "https://drive.google.com/file/d/1kj6SQ3OnHBST44NhxIyrrUaoDwa3o3Tg/view?usp=sharing",
       "repoLink": "https://github.com/surajgola00/Smart-Yatra"
