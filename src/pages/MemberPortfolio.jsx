@@ -18,7 +18,6 @@ function MemberPortfolio() {
   const navigate = useNavigate();
   const memberData = useMemo(() => getMemberById(memberName), [memberName]);
 
-  // Scroll to top on page load
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [memberName]);
@@ -61,13 +60,49 @@ function MemberPortfolio() {
       : null,
   ].filter(Boolean);
 
+  const hasCertificatesSection =
+    (memberData.certificates?.length || 0) > 0 ||
+    (memberData.achievements?.length || 0) > 0;
+
+  const hasResumeSection =
+    contactItems.length > 0 ||
+    Boolean(memberData.resumeUrl) ||
+    Boolean(memberData.resume?.heading) ||
+    (memberData.resume?.sections?.length || 0) > 0;
+
   const sections = [
-    { id: "objective", className: "objective-section", label: "Objective", icon: "🎯" },
-    { id: "about", className: "about-section", label: "About", icon: "👤" },
-    { id: "skills", className: "skills-section", label: "Skills", icon: "💻" },
-    { id: "projects", className: "projects-section", label: "Projects", icon: "🚀" },
-    { id: "certificates", className: "certificates-section", label: "Certificates", icon: "🏆" },
-  ];
+    memberData.objective
+      ? { id: "objective", className: "objective-section", label: "Objective", icon: "\u{1F3AF}" }
+      : null,
+    memberData.aboutParagraphs?.length > 0
+      ? { id: "about", className: "about-section", label: "About", icon: "\u{1F464}" }
+      : null,
+    memberData.skills?.length > 0
+      ? { id: "skills", className: "skills-section", label: "Skills", icon: "\u{1F6E0}" }
+      : null,
+    memberData.projects?.length > 0
+      ? { id: "projects", className: "projects-section", label: "Projects", icon: "\u{1F680}" }
+      : null,
+    hasCertificatesSection
+      ? {
+          id: "certificates",
+          className: "certificates-section",
+          label: "Certificates",
+          icon: "\u{1F3C6}",
+        }
+      : null,
+    hasResumeSection
+      ? {
+          id: "resume-certifications",
+          className: "resume-section",
+          label: "Resume & Certifications",
+          icon: "\u{1F4C4}",
+          targetClassNames: hasCertificatesSection
+            ? ["resume-section", "certificates-section"]
+            : ["resume-section"],
+        }
+      : null,
+  ].filter(Boolean);
 
   return (
     <div className="portfolio-page" key={memberName}>
@@ -98,67 +133,71 @@ function MemberPortfolio() {
               <ProjectsSection projects={memberData.projects} />
             </section>
           )}
-          {memberData.certificates?.length > 0 && (
+          {hasCertificatesSection && (
             <section className="certificates-section">
-              <CertificatesSection certificates={memberData.certificates} />
+              <CertificatesSection
+                certificates={memberData.certificates}
+                achievements={memberData.achievements}
+              />
             </section>
           )}
+          {hasResumeSection && (
+            <section className="resume-section">
+              <div className="container">
+                <h2>Resume & Contact</h2>
+                <div className="resume-content">
+                  {memberData.resume?.heading && (
+                    <p className="resume-heading">{memberData.resume.heading}</p>
+                  )}
 
-          <section className="resume-section">
-            <div className="container">
-              <h2>Resume & Contact</h2>
-              <div className="resume-content">
-                {memberData.resume?.heading && (
-                  <p className="resume-heading">{memberData.resume.heading}</p>
-                )}
+                  {contactItems.length > 0 && (
+                    <div className="contact-links">
+                      {contactItems.map((item) =>
+                        item.href ? (
+                          <a
+                            key={item.label}
+                            href={item.href}
+                            className="contact-link"
+                          >
+                            <span>{item.label}</span>
+                            <strong>{item.value}</strong>
+                          </a>
+                        ) : (
+                          <div key={item.label} className="contact-link static">
+                            <span>{item.label}</span>
+                            <strong>{item.value}</strong>
+                          </div>
+                        ),
+                      )}
+                    </div>
+                  )}
 
-                {contactItems.length > 0 && (
-                  <div className="contact-links">
-                    {contactItems.map((item) =>
-                      item.href ? (
-                        <a
-                          key={item.label}
-                          href={item.href}
-                          className="contact-link"
-                        >
-                          <span>{item.label}</span>
-                          <strong>{item.value}</strong>
-                        </a>
-                      ) : (
-                        <div key={item.label} className="contact-link static">
-                          <span>{item.label}</span>
-                          <strong>{item.value}</strong>
-                        </div>
-                      ),
-                    )}
-                  </div>
-                )}
+                  {memberData.resumeUrl && (
+                    <a
+                      href={memberData.resumeUrl}
+                      download
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="download-btn"
+                    >
+                      Download Resume
+                    </a>
+                  )}
 
-                {memberData.resumeUrl && (
-                  <a
-                    href={memberData.resumeUrl}
-                    download
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="download-btn"
-                  >
-                    📥 Download Resume
-                  </a>
-                )}
-
-                {memberData.resume?.sections?.length > 0 && (
-                  <div className="resume-grid">
-                    {memberData.resume.sections.map((section) => (
-                      <article key={section.title} className="resume-card">
-                        <h3>{section.title}</h3>
-                        <p>{section.content}</p>
-                      </article>
-                    ))}
-                  </div>
-                )}
+                  {memberData.resume?.sections?.length > 0 && (
+                    <div className="resume-grid">
+                      {memberData.resume.sections.map((section) => (
+                        <article key={section.title} className="resume-card">
+                          <h3>{section.title}</h3>
+                          <p>{section.content}</p>
+                        </article>
+                      ))}
+                    </div>
+                  )}
+                </div>
               </div>
-            </div>
-          </section>
+            </section>
+          )}
         </div>
       </main>
       <Footer />

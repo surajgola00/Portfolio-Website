@@ -6,27 +6,60 @@ function SectionNav({ sections }) {
   const navRef = useRef(null);
 
   useEffect(() => {
+    setActiveSection(sections[0]?.id || "objective");
+  }, [sections]);
+
+  useEffect(() => {
+    const getTargetSelectors = (section) =>
+      section.targetClassNames?.length > 0
+        ? section.targetClassNames
+        : section.className
+          ? [section.className]
+          : [];
+
     const handleScroll = () => {
-      // Find which section is currently in view
+      const viewportCenter = window.innerHeight / 2;
+
       for (const section of sections) {
-        const element = document.querySelector(`.${section.className}`);
-        if (element) {
+        const targetSelectors = getTargetSelectors(section);
+
+        for (const selector of targetSelectors) {
+          const element = document.querySelector(`.${selector}`);
+          if (!element) {
+            continue;
+          }
+
           const rect = element.getBoundingClientRect();
-          // Check if section is in middle of viewport
-          if (rect.top < window.innerHeight / 2 && rect.bottom > window.innerHeight / 2) {
+          if (rect.top <= viewportCenter && rect.bottom >= viewportCenter) {
             setActiveSection(section.id);
-            break;
+            return;
           }
         }
+      }
+
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
+        setActiveSection(sections[sections.length - 1]?.id || activeSection);
       }
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [sections]);
+    handleScroll();
 
-  const handleNavClick = (sectionId, className) => {
-    const element = document.querySelector(`.${className}`);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [activeSection, sections]);
+
+  const handleNavClick = (section) => {
+    const targetSelectors =
+      section.targetClassNames?.length > 0
+        ? section.targetClassNames
+        : section.className
+          ? [section.className]
+          : [];
+
+    const element = targetSelectors
+      .map((selector) => document.querySelector(`.${selector}`))
+      .find(Boolean);
+
     if (element) {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
@@ -39,7 +72,7 @@ function SectionNav({ sections }) {
           <button
             key={section.id}
             className={`nav-item ${activeSection === section.id ? "active" : ""}`}
-            onClick={() => handleNavClick(section.id, section.className)}
+            onClick={() => handleNavClick(section)}
             title={section.label}
           >
             <span className="nav-icon">{section.icon}</span>

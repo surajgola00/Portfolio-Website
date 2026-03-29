@@ -18,46 +18,61 @@ function CustomCursor() {
       return undefined;
     }
 
+    positionRef.current = {
+      x: window.innerWidth / 2,
+      y: window.innerHeight / 2,
+    };
+    targetRef.current = { ...positionRef.current };
+
     const handleMouseMove = (e) => {
       targetRef.current = { x: e.clientX, y: e.clientY };
-      // Always show cursor on mouse move
+
       if (cursorRef.current) {
         cursorRef.current.classList.add("visible");
+      }
+
+      if (dotRef.current) {
+        dotRef.current.classList.add("visible");
       }
     };
 
     const handleMouseLeave = () => {
       if (cursorRef.current) {
-        cursorRef.current.classList.remove("visible");
+        cursorRef.current.classList.remove("visible", "hover");
+      }
+
+      if (dotRef.current) {
+        dotRef.current.classList.remove("visible");
       }
     };
 
-    // Hover effects on interactive elements
-    const handleMouseOverInteractive = () => {
+    const updateHoverState = (target) => {
+      const isInteractive = target?.closest(
+        'a, button, input, textarea, select, label, [role="button"], .project-link, .member-card, .skill-tag, .badge',
+      );
+
       if (cursorRef.current) {
-        cursorRef.current.classList.add("hover");
+        cursorRef.current.classList.toggle("hover", Boolean(isInteractive));
       }
     };
 
-    const handleMouseOutInteractive = () => {
-      if (cursorRef.current) {
-        cursorRef.current.classList.remove("hover");
-      }
+    const handleHoverEvent = (event) => {
+      const target = event.type === "mouseout" ? event.relatedTarget : event.target;
+      updateHoverState(target);
     };
 
-    // Animation loop to smoothly follow cursor
     const animateCursor = () => {
       if (cursorRef.current && dotRef.current) {
         positionRef.current.x +=
-          (targetRef.current.x - positionRef.current.x) * 0.3;
+          (targetRef.current.x - positionRef.current.x) * 0.28;
         positionRef.current.y +=
-          (targetRef.current.y - positionRef.current.y) * 0.3;
+          (targetRef.current.y - positionRef.current.y) * 0.28;
 
-        cursorRef.current.style.left = positionRef.current.x + "px";
-        cursorRef.current.style.top = positionRef.current.y + "px";
+        cursorRef.current.style.left = `${positionRef.current.x}px`;
+        cursorRef.current.style.top = `${positionRef.current.y}px`;
 
-        dotRef.current.style.left = targetRef.current.x + "px";
-        dotRef.current.style.top = targetRef.current.y + "px";
+        dotRef.current.style.left = `${targetRef.current.x}px`;
+        dotRef.current.style.top = `${targetRef.current.y}px`;
       }
 
       animationFrameRef.current = requestAnimationFrame(animateCursor);
@@ -65,25 +80,18 @@ function CustomCursor() {
 
     document.addEventListener("mousemove", handleMouseMove);
     document.addEventListener("mouseleave", handleMouseLeave);
-
-    const interactiveElements = document.querySelectorAll(
-      'a, button, input, textarea, [role="button"], .project-link, .member-card, .skill-tag, .badge',
-    );
-
-    interactiveElements.forEach((el) => {
-      el.addEventListener("mouseenter", handleMouseOverInteractive);
-      el.addEventListener("mouseleave", handleMouseOutInteractive);
-    });
+    document.addEventListener("mouseover", handleHoverEvent);
+    document.addEventListener("focusin", handleHoverEvent);
+    document.addEventListener("mouseout", handleHoverEvent);
 
     animationFrameRef.current = requestAnimationFrame(animateCursor);
 
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
       document.removeEventListener("mouseleave", handleMouseLeave);
-      interactiveElements.forEach((el) => {
-        el.removeEventListener("mouseenter", handleMouseOverInteractive);
-        el.removeEventListener("mouseleave", handleMouseOutInteractive);
-      });
+      document.removeEventListener("mouseover", handleHoverEvent);
+      document.removeEventListener("focusin", handleHoverEvent);
+      document.removeEventListener("mouseout", handleHoverEvent);
       cancelAnimationFrame(animationFrameRef.current);
     };
   }, []);

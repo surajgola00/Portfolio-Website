@@ -293,13 +293,17 @@
 }
 
 .cert-icon {
-    font-size: 3rem;
+    font-size: 1rem;
     margin-bottom: var(--gap-md);
     transition: transform var(--transition-normal);
+    color: var(--primary);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
 }
 
 .certificate-card:hover .cert-icon {
-    transform: scale(1.2) rotate(5deg);
+    transform: scale(1.05);
 }
 
 .certificate-card h3 {
@@ -317,6 +321,12 @@
 .cert-date {
     color: var(--text-secondary);
     font-size: 0.9rem;
+    margin-bottom: var(--gap-md);
+}
+
+.cert-description {
+    color: var(--text-secondary);
+    line-height: 1.6;
     margin-bottom: var(--gap-md);
 }
 

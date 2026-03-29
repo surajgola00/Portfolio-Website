@@ -69,6 +69,17 @@ const normalizeCertificates = (certificates = []) =>
       certificate.credentialUrl === "#" ? "" : certificate.credentialUrl,
   }));
 
+const normalizeAchievements = (achievements = []) =>
+  achievements.map((achievement, index) => ({
+    id: achievement.id || `achievement-${index + 1}`,
+    title: achievement.title || "Achievement",
+    issuer: achievement.issuer || achievement.organization || "Achievement",
+    date: achievement.date || achievement.year || "",
+    description: achievement.description || "",
+    credentialUrl:
+      achievement.credentialUrl === "#" ? "" : achievement.credentialUrl || "",
+  }));
+
 const normalizeMember = (member) => {
   const aboutParagraphs = getParagraphsFromHtml(
     member.aboutHtml || member.about || "",
@@ -86,6 +97,7 @@ const normalizeMember = (member) => {
     projects: normalizeProjects(member.projects),
     experience: normalizeExperience(member.experience),
     certificates: normalizeCertificates(member.certificates),
+    achievements: normalizeAchievements(member.achievements),
     resumeUrl: member.resumeUrl || null,
     resume: member.resume || null,
     contact: {
