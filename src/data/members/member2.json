@@ -34,7 +34,7 @@
       "id": 1,
       "title": "CareMatrix — AI-Powered Resource Forecasting",
       "description": "Developed a predictive engine using Random Forest to forecast hospital patient inflow with a 72-hour lead time. Engineered features by correlating environmental variables like AQI and weather patterns with historical admission data. Implemented automated load visualization heatmaps to streamline medical staff distribution.",
-      "imageUrl": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400&h=300&fit=crop",
+      "imageUrl": "/images/CareMatrixDashboard.jpeg",
       "techStack": ["Python", "Random Forest", "Scikit-learn", "Pandas", "Streamlit"],
       "demoLink": "#",
       "repoLink": "https://github.com/kaushiktushar337"
