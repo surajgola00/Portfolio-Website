@@ -47,7 +47,7 @@
       "id": 1,
       "title": "JalYukti - Intelligent Water Logging Dashboard",
       "description": "Developed a multi-role dashboard system for citizens, commuters, officials, and city admins to monitor water logging. Built ward-level risk maps and real-time alert systems for improved city management.",
-      "imageUrl": "/images/JalYuktiWardRiskMap.jpeg",
+      "imageUrl": "/images/JalYuktiWardRiskMap.png",
       "techStack": ["Web Development", "Dashboards", "Data Visualization"],
       "demoLink": "#####",
       "repoLink": "https://github.com/seemanshi052-coder/JalYukti-Hack4DelhiUpdated"
